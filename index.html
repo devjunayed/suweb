@@ -28,15 +28,27 @@
             </h1>
           </div>
           <div class="menu">
-            <ul>
+            <ul id="menu1">
               <li><a href="#">Home</a></li>
               <li><a href="#bio">Bio</a></li>
               <li><a href="#services">Services</a></li>
               <li><a href="#projects">Projects</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
+            <!-- Menu bar icon open-->
+            <div class="menu-bar-icon" id="menu-bar-icon" onclick="menuIconClose(this);">
+              <div class="bar1"></div>
+              <div class="bar2"></div>
+              <div class="bar3"></div>
+            </div>
+            <!-- menu bar icon close -->
+            <div class="menu-bar-close" id="menu-bar-close" onclick="menuIconOpen(this);">
+                <div class="close1"></div>
+                <div class="close2"></div>
+            </div>
           </div>
         </div>
+
         <!-- Menu bar end here -->
 
         <!-- Header content start here -->
@@ -221,23 +233,23 @@
           <div class="footer-content">
             <form action="">
               <!-- <div class="first-last-name fix"> -->
-                <div class="first-name fix">
-                  <label for="firstName">First Name : </label><br />
-                  <input
-                    type="text"
-                    placeholder="Enter your first name"
-                    id="firstName"
-                    required
-                  />
-                </div>
-                <div class="last-name fix">
-                  <label for="lastName">Last Name : </label><br />
-                  <input
-                    type="text"
-                    placeholder="Enter your last Name"
-                    id="lastName"
-                  />
-                </div>
+              <div class="first-name fix">
+                <label for="firstName">First Name : </label><br />
+                <input
+                  type="text"
+                  placeholder="Enter your first name"
+                  id="firstName"
+                  required
+                />
+              </div>
+              <div class="last-name fix">
+                <label for="lastName">Last Name : </label><br />
+                <input
+                  type="text"
+                  placeholder="Enter your last Name"
+                  id="lastName"
+                />
+              </div>
               <!-- </div> -->
               <div class="email fix">
                 <label for="email">Email : </label><br />
@@ -341,8 +353,21 @@
     <!-- Script for fontawesome -->
     <script src="assets/js/fontawesome.js"></script>
 
+
     <!-- Main js file -->
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/main.js" type="text/javascript"></script>
+    <script>
+        function menuIconClose(id){
+            id.style.display = 'none';
+            document.getElementById('menu-bar-close').style.display = 'block';
+            document.getElementById('menu1').style.display = 'block';
+        }
+        function menuIconOpen(id){
+            id.style.display = 'none';
+            document.getElementById('menu-bar-icon').style.display = 'block';
+            document.getElementById('menu1').style.display = 'none';
+        }
+    </script>
 
     <!--
           Programmer name: Md Junayed

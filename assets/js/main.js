@@ -10,3 +10,6 @@ function scrollFunction(){
         mybutton.style.display = "none";
     }
 }
+
+
+// script for menu bar responsive icon
