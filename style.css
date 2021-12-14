@@ -476,6 +476,7 @@ span.swiper-pagination-bullet-active{
   .products {
     display: flex;
     flex-flow: row wrap;
+    justify-content: center;
   }
   button:hover,
   .buttons > .active{
